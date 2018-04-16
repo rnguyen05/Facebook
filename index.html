@@ -28,6 +28,17 @@
         <h1>Hello Facebook</h1>
 
     <script>
+
+FB.api(
+  '/me',
+  'GET',
+  {"fields":"id,name,location,website,category,photos{album}"},
+  function(response) {
+      console.log(response);
+  }
+);
+
+        /* Social Login
         window.fbAsyncInit = function() {
           FB.init({
             appId            : '251643178731320',
@@ -50,19 +61,19 @@
          });
 
          function checkLoginState() {
-  FB.getLoginStatus(function(response) {
-    statusChangeCallback(response);
-  });
+            FB.getLoginStatus(function(response) {
+            statusChangeCallback(response);
+         });
 }
 
-
+    */
 
       </script>   
-      
+      <!--social login
       <fb:login-button 
       scope="public_profile,email"
       onlogin="checkLoginState();">
     </fb:login-button>
-    
+-->
 </body>
 </html>
