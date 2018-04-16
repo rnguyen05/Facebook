@@ -29,16 +29,9 @@
 
     <script>
 
-FB.api(
-  '/me',
-  'GET',
-  {"fields":"id,name,location,website,category,photos{album}"},
-  function(response) {
-      console.log(response);
-  }
-);
 
-        /* Social Login
+
+        
         window.fbAsyncInit = function() {
           FB.init({
             appId            : '251643178731320',
@@ -47,7 +40,7 @@ FB.api(
             version          : 'v2.12'
           });
         };
-      
+
         (function(d, s, id){
            var js, fjs = d.getElementsByTagName(s)[0];
            if (d.getElementById(id)) {return;}
@@ -56,6 +49,16 @@ FB.api(
            fjs.parentNode.insertBefore(js, fjs);
          }(document, 'script', 'facebook-jssdk'));
 
+         FB.api(
+  '/me',
+  'GET',
+  {"fields":"id,name,location,website,category,photos{album}"},
+  function(response) {
+      console.log(response);
+  }
+);
+
+         /* social login status
          FB.getLoginStatus(function(response) {
             statusChangeCallback(response);
          });
@@ -64,9 +67,10 @@ FB.api(
             FB.getLoginStatus(function(response) {
             statusChangeCallback(response);
          });
+         */
 }
 
-    */
+   
 
       </script>   
       <!--social login
