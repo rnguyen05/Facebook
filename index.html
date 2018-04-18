@@ -30,7 +30,13 @@
           'GET',
           {"fields":"id,name,accounts{app_id,app_links,access_token,fan_count,cover}"},
           function(response) {
-              console.log(repsonse);
+              //console.log(repsonse);
+              if(!response || response.error){
+                alert('error');
+              }
+              else {
+                console.log('ID:'+JSON.stringify(response));
+              }
           }
         );
 
