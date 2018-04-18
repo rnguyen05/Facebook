@@ -11,7 +11,7 @@
 </head>
 <body>
   <div id="fb-root"></div>
-  <div id="showPost">showPost 3</div>
+  <div id="showPost">showPost 4</div>
 
   
   <script>
@@ -31,7 +31,7 @@
         FB.api(
             '/me',
             'GET',
-            {"fields":"id,name,accounts{access_token,fan_count,cover}"},
+            {"fields":"id,name,accounts{access_token,fan_count,cover}&id=575674122812947"},
             function(response) {
               console.log(response);
             }
