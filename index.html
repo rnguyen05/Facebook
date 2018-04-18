@@ -13,6 +13,8 @@
   <div id="fb-root"></div>
   <div id="showPost">showPost 8</div>
 
+  <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="standard" data-action="like" data-size="large" data-show-faces="false" data-share="true"></div>
+
   
   <script>
     
@@ -33,7 +35,6 @@
               console.log(response);
               //Show fan_count
               var newDiv = document.getElementById("showPost");
-              <a role="button" class="_42ft _4jy0 _opc _opd pluginConnectButtonConnected _4jy3 _517h _51sy" title="" href="https://www.facebook.com/northhollywoodchurch/" target="_blank"><i class="_3-8_ img sp_Ab9mJzMdWxi_2x sx_287cd7"></i>Liked</a>
               newDiv.innerHTML+= "<div>"+response.name+"<br/>"+response.accounts.data[2].fan_count+" likes"+
               "</div><br/>";
             }
@@ -59,7 +60,7 @@
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) {return;}
         js = d.createElement(s); js.id = id;
-        js.src = "https://connect.facebook.net/en_US/sdk.js";
+        js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12&appId=251643178731320&autoLogAppEvents=1';
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
 
