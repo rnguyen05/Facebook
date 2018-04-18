@@ -46,8 +46,8 @@ FB.api('/me?fields=id,name,likes,posts.limit(3){message}&access_token=EAADk3j5HR
     console.log("dataNum"+ dataNum);
     var i=0;
     for(i=0;i<dataNum;i++){
-      var newDiv = document.createElement('div');
-      var divElement = "<span class='fb-post'>"+response.posts.data[i].message;
+      var newDiv = document.createElement('div class="fb-post"');
+      var divElement = "<span>"+response.posts.data[i].message+"</span>";
       newDiv.innerHTML = divElement;
       document.getElementById('showPost').appendChild(newDiv);
     }
