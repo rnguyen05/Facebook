@@ -37,7 +37,7 @@
   //   }
   // });
   var post_id=0;
-FB.api('/me?fields=posts{permalink_url},data&access_token=EAADk3j5HRzgBAJfbCrLOw9PYXnnyQBXR8vHZAzZAtzpGU0u9jwa2iygMiCQc0kFNCBGO4CALdkqQZCNplAEMvcdSZBthIOq5ivNoZAThJOBbFJRoQtVdy5kPi1ZA9qwpOstdK6CI6UknKMSLDidNzzrVO5pPc2Hdef1ZCFCXQwQT7GVdeqYaxgc8oopRYrl98ddfuMZC3iC9ngZDZD&limit=5','get',function(response){
+FB.api('/me?fields=id,name,likes,posts{message}&access_token=EAADk3j5HRzgBAJfbCrLOw9PYXnnyQBXR8vHZAzZAtzpGU0u9jwa2iygMiCQc0kFNCBGO4CALdkqQZCNplAEMvcdSZBthIOq5ivNoZAThJOBbFJRoQtVdy5kPi1ZA9qwpOstdK6CI6UknKMSLDidNzzrVO5pPc2Hdef1ZCFCXQwQT7GVdeqYaxgc8oopRYrl98ddfuMZC3iC9ngZDZD&limit=5','get',function(response){
   if(!response || response.error){
     alert('eror');
   }else{
