@@ -55,7 +55,7 @@ FB.api('/me?fields=id,name,likes,posts.limit(3){message,permalink_url}&access_to
       // newDiv.innerHTML = divElement;
       // document.getElementById('showPost').appendChild(newDiv);
 
-      var html = '<div class="fb-post" data-href="'+response.posts.data[i].permalink_url+'</div>';
+      var html = 'class="fb-post" data-href="'+response.posts.data[i].permalink_url;
     
       newDiv.innerHTML = html;
       document.getElementById('showPost').appendChild(newDiv);
