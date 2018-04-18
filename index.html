@@ -25,10 +25,7 @@
           version          : 'v2.12'
         });
 
-        FB.api(
-          '/me',
-          'GET',
-          {"fields":"id,name,accounts{app_id,app_links,access_token,fan_count,cover}"},
+        FB.api("/me?fields=id,name,accounts{app_id,app_links,access_token,fan_count,cover}",'GET',
           function(response) {
               console.log("here");//console.log(repsonse);
               if(!response || response.error){
