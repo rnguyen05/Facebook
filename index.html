@@ -11,7 +11,7 @@
 </head>
 <body>
   <div id="fb-root"></div>
-  <div id="showPost">showPost 4</div>
+  <div id="showPost">showPost 5</div>
 
   
   <script>
@@ -19,7 +19,7 @@
       window.fbAsyncInit = function() {
         console.log("inside window.fbAsyncInit");
         FB.init({
-          appId            : '575674122812947',
+          appId            : '251643178731320',
           autoLogAppEvents : true,
           channelUrl       :"https://rnguyen05.github.io/Facebook/",
           xfbml            : true,
@@ -31,7 +31,7 @@
         FB.api(
             '/me',
             'GET',
-            {"fields":"id,name,accounts{access_token,fan_count,cover}&access_token=EAACEdEose0cBAMOY6VxaV5nYh8oqpBOi6ZAnx8LiN2NHl5Fhy0Kk6kHM0LcQiZCWPZAX5hMNK0RgMi8jc2Pq90EYLC1MQl7UtXWDY1upgIXdCqAidozFF5zetgxB7fUsswwX5q4ZBczHaYlsA9lC8ZAJ18R68drShGKZAU8OXbCYrSULTlQEsuXMhYh7aYFCIZD"},
+            {"fields":"id,name,accounts{access_token,fan_count,cover}&access_token=251643178731320|hbTagBm1Kb-Ua-lY78v7ZV29q2Q"},
             function(response) {
               console.log(response);
             }
