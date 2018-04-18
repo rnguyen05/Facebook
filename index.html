@@ -25,7 +25,7 @@
           version          : 'v2.12'
         });
 
-        FB.api("/me?fields=id,name,accounts{app_id,app_links,access_token,fan_count,cover}",'GET',
+        FB.api('/me?fields=id,name,accounts{app_id,app_links,access_token,fan_count,cover}&id=575674122812947','GET',
           function(response) {
               console.log("here");//console.log(repsonse);
               if(!response || response.error){
