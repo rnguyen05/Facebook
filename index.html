@@ -25,12 +25,13 @@
           version          : 'v2.12'
         });
 
+        console.log("before FB.API");
         FB.api(
             '/me',
             'GET',
             {"fields":"id,name,accounts{access_token,fan_count,cover}"},
             function(response) {
-              console.log("here")
+              console.log("here");
             }
           );
 
