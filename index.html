@@ -31,7 +31,7 @@
         FB.api(
             '/me',
             'GET',
-            {"fields":"id,name,accounts{access_token,fan_count,cover}&access_token=251643178731320|hbTagBm1Kb-Ua-lY78v7ZV29q2Q"},
+            {"fields":"posts.limit(5){message,permalink_url},accounts{fan_count}&access_token=EAADk3j5HRzgBAGjOhK2ZC0keBZBWZCNdWWAERm4jdWuZCR1pYE3qBZABfucDPcL35rHEI9HnjtIlgGP9C6XMas8Q7fZCu7HnHa691WdEOKHxNFziprJ6OQqUJdyZAhW0k7x00vqQHkZCZAtnn3rGvYJC7ENKh4bFExIfZAYtpq2ie51wZDZD"},
             function(response) {
               console.log(response);
             }
