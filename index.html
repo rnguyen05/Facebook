@@ -59,7 +59,7 @@ FB.api('/me?fields=id,name,likes,posts.limit(3){message,permalink_url}&access_to
         'data-width="500" data-show-text="true"><blockquote cite="'+response.posts.data[i].permalink_url+
           'class="fb-xfbml-parse-ignore">'+"++MESSAGE++"+'<a href="https://www.facebook.com/HT.NorthHollywood">Hội Thánh NorthHollywood</a> on&nbsp;<a href="'+response.posts.data[i].permalink_url+'>'+"++DATE++"+'</a></blockquote></div>';
     
-      newDiv.innerHTML = divElement;
+      newDiv.innerHTML = html;
       document.getElementById('showPost').appendChild(newDiv);
     }
 
