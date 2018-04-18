@@ -11,10 +11,11 @@
 </head>
 <body>
   <div id="fb-root"></div>
-  <div id="showPost"></div>
+  <div id="showPost">showPost</div>
 
-
+  
   <script>
+    console.log("before window.fbAsyncInit");
       window.fbAsyncInit = function() {
         FB.init({
           appId            : '575674122812947',
