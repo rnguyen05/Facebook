@@ -45,10 +45,12 @@ FB.api('/me?fields=id,name,likes,posts.limit(3){message}&access_token=EAADk3j5HR
     var dataNum = response.posts.data.length;
     console.log("dataNum"+ dataNum);
     var i=0;
-    // for(i=0;i<dataNum;i++){
-    //   var newDiv = document.createElement('div');
-    //   var divElement = "<span class='fb-post'">
-    //   newDiv.innerHTML = '<span class="fb-post">Hello world.</span>';
+    for(i=0;i<dataNum;i++){
+      var newDiv = document.createElement('div');
+      var divElement = "<span class='fb-post'>"+response.posts.data[i].message;
+      newDiv.innerHTML = divElement;
+      document.getElementById('showPost').appendChild(newDiv);
+    }
 
 
     //   <div class="fb-post" data-href="https://www.facebook.com/HT.NorthHollywood/posts/575222216191471" 
