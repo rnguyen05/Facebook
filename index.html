@@ -50,15 +50,8 @@ FB.api('/me?fields=id,name,likes,posts.limit(3){message,permalink_url}&access_to
     console.log("dataNum"+ dataNum);
     var i=0;
     for(i=0;i<dataNum;i++){
-      var newDiv = document.createElement('div');
-      // var divElement = "<span>"+response.posts.data[i].permalink_url+"</span>";
-      // newDiv.innerHTML = divElement;
-      // document.getElementById('showPost').appendChild(newDiv);
-
-      var html = 'class="fb-post" data-href="'+response.posts.data[i].permalink_url;
-    
-      newDiv.innerHTML = html;
-      document.getElementById('showPost').appendChild(newDiv);
+      var newDiv = document.getElementById("showPost");
+      newDiv.innerHTML+= "<div class='fb-post'>"+response.posts.data[i].permalink_url+"</div>";
     }
 
     // var html = '<div class="fb-post" data-href="'+response.posts.data[i].permalink_url+
