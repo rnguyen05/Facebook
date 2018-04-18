@@ -11,7 +11,7 @@
 </head>
 <body>
   <div id="fb-root"></div>
-  <div id="showPost">showPost two</div>
+  <div id="showPost">showPost 3</div>
 
   
   <script>
@@ -33,7 +33,7 @@
             'GET',
             {"fields":"id,name,accounts{access_token,fan_count,cover}"},
             function(response) {
-              console.log("here");
+              console.log(response);
             }
           );
 
