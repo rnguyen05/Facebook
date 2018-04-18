@@ -15,8 +15,9 @@
 
   
   <script>
-    console.log("before window.fbAsyncInit");
+    
       window.fbAsyncInit = function() {
+        console.log("inside window.fbAsyncInit");
         FB.init({
           appId            : '575674122812947',
           autoLogAppEvents : true,
