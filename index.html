@@ -36,8 +36,12 @@
   //     FB.login(function(response){},{scope: 'publish_stream'});
   //   }
   // });
+
+
+
+
   var post_id=0;
-FB.api('/me?fields=id,name,likes,posts.limit(3){message}&access_token=EAADk3j5HRzgBAJfbCrLOw9PYXnnyQBXR8vHZAzZAtzpGU0u9jwa2iygMiCQc0kFNCBGO4CALdkqQZCNplAEMvcdSZBthIOq5ivNoZAThJOBbFJRoQtVdy5kPi1ZA9qwpOstdK6CI6UknKMSLDidNzzrVO5pPc2Hdef1ZCFCXQwQT7GVdeqYaxgc8oopRYrl98ddfuMZC3iC9ngZDZD','get',function(response){
+FB.api('/me?fields=id,name,likes,posts.limit(3){message,permalink_url}&access_token=EAADk3j5HRzgBAJfbCrLOw9PYXnnyQBXR8vHZAzZAtzpGU0u9jwa2iygMiCQc0kFNCBGO4CALdkqQZCNplAEMvcdSZBthIOq5ivNoZAThJOBbFJRoQtVdy5kPi1ZA9qwpOstdK6CI6UknKMSLDidNzzrVO5pPc2Hdef1ZCFCXQwQT7GVdeqYaxgc8oopRYrl98ddfuMZC3iC9ngZDZD','get',function(response){
   if(!response || response.error){
     alert('eror');
   }else{
@@ -47,8 +51,7 @@ FB.api('/me?fields=id,name,likes,posts.limit(3){message}&access_token=EAADk3j5HR
     var i=0;
     for(i=0;i<dataNum;i++){
       var newDiv = document.createElement('div');
-      newDiv.setAttribute("class","fb-post");
-      var divElement = "<span>"+response.posts.data[i].message+"</span>";
+      var divElement = "<span>"+response.posts.data[i].permalink_url+"</span>";
       newDiv.innerHTML = divElement;
       document.getElementById('showPost').appendChild(newDiv);
     }
