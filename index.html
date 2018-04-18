@@ -33,8 +33,8 @@
               console.log(response);
               //Show fan_count
               var newDiv = document.getElementById("showPost");
-              newDiv.innerHTML+= "<div class='fb-post'>"+response.name+response.accounts.data[2].fan_count+"likes"+
-              "</div><br>";
+              newDiv.innerHTML+= "<div>"+response.name+"<br/>"+response.accounts.data[2].fan_count+"likes"+
+              "</div><br/>";
             }
           );
 
