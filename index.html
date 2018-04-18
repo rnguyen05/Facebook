@@ -41,7 +41,7 @@
 
 
   var post_id=0;
-FB.api('/me?fields=id,name,likes,posts.limit(5){message,permalink_url},accounts{fan_count}&access_token=EAADk3j5HRzgBAMjSk8ZAu2DV8wse82mLdH1KC1UpKmrQs4acTW58uJmoNcbPWNExb8dSTdXciyuDDHs7lmiLLJHrWzcTMWtaArMRlGrZCzWiePVNEf4zoZAJS2Pf3YZAXBEl8r4gai6fCzYxGdyg2SXLxjzenpDZBZBG4UOZBNh7Gv9yZBW2YA9NoVZAQ969eZCm8ZD','get',function(response){
+FB.api('/me?fields=id,name,likes,posts.limit(5){message,permalink_url},accounts{fan_count}&access_token=EAADk3j5HRzgBAMZCIKMFOFgaQZCQ8KHXBvA8NYsLvDCSppJodLtdxF71u2bR2grC7dQ2i4HQe5k2apl3uwLNIHPwxCgJnFZBBWOLiTKR931ZCTmCSnaZAvxWZC8IEQYxzpF68Y1EwC75KdHc7vJT4GCZBU9r7nmEZC41LoZA17e8XmVQ7Xs2EV1SZBFlwDdWqf32IVVX95RMp8QwZDZD','get',function(response){
   if(!response || response.error){
     alert('eror');
   }else{
