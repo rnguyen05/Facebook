@@ -10,9 +10,46 @@
      <!--  <script src="assets/javascript/app.js"></script> -->
 </head>
 <body>
-    <div id="fb-root"></div>
+  <div id="fb-root"></div>
   <div id="showPost"></div>
+
+
   <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId            : '251643178731320',
+          autoLogAppEvents : true,
+          channelUrl       :"https://rnguyen05.github.io/Facebook/",
+          xfbml            : true,
+          cookie           : true,
+          version          : 'v2.12'
+        });
+
+        FB.api(
+          '/me',
+          'GET',
+          {"fields":"id,name,accounts{app_id,app_links,access_token,fan_count,cover}"},
+          function(response) {
+              console.log(repsonse);
+          }
+        );
+
+      }//End of window.fbAsyncInit = function()
+  </script> 
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+    /*
     window.fbAsyncInit = function() {
         FB.init({
           appId            : '251643178731320',
@@ -136,9 +173,10 @@ FB.api('/me?fields=id,name,likes,posts.limit(5){message,permalink_url},accounts{
 //   // Debug response (optional)
 //   console.log(response);
 // });
+*/
   </script>
   
-  <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fnorthhollywoodchurch%2F&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId=251643178731320" width="420" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+  <!-- <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fnorthhollywoodchurch%2F&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId=251643178731320" width="420" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe> -->
 
   <!-- <div class="fb-post" data-href="https://www.facebook.com/HT.NorthHollywood/posts/575222216191471" 
   data-width="500" data-show-text="true"><blockquote cite="https://www.facebook.com/HT.NorthHollywood/posts/575222216191471" 
