@@ -55,7 +55,7 @@
                     // logoImg.attr("src",response.accounts.data[k].cover.source);
                     // headerDiv.css("background-image:url('"+logoImg+"');");
 
-                    headerDiv.style.backgroundImage=response.accounts.data[k].cover.source;
+                    headerDiv.css("background-image:url("+response.accounts.data[k].cover.source+");");
                     //headerDiv.append(logoImg);
                   }
                 }
