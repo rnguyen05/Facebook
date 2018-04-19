@@ -116,7 +116,10 @@
                 var post = tmp.data[i].message.replace(/\n/g, "<br />");
                 bodyDiv.append(post);
                 //See more... click function
-                bodyDiv.append("See more...");
+                var seeMore = $("<div id='seeMore'>");
+                seeMore.css("float","right");
+                seeMore.html("See more...");
+                bodyDiv.append(seeMore);
                 
                 
                 
