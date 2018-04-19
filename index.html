@@ -64,6 +64,22 @@
                 var profileImg = $("<button id='logo'>");
                 profileImg.attr("value",tmp.permalink_url);
                 headerDiv.append(profileImg);
+
+                //Click on logo to lead to facebook face
+                //Need to check to see if user if logged in 
+                //if user is not logged in, ask to log in and save login to firebase database
+                $("#logo").click(function() {
+                  
+                });
+
+                //See more...
+                //Click on logo to lead to facebook face
+                //Need to check to see if user if logged in 
+                //if user is not logged in, ask to log in and save login to firebase database
+
+
+
+
                 //Church Name
                 var churchName = response.name;
                 
@@ -87,7 +103,7 @@
                 var bodyDiv = $("<div id='bodyDiv'> class='row'");
                 var post = tmp.data[i].message.replace(/\n/g, "<br />");
                 bodyDiv.append(post);
-                
+                body.append("See more...");
                 
                 
                 
@@ -164,6 +180,10 @@
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
 
+
+
+
+        
   </script> 
 
 
