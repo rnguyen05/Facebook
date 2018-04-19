@@ -70,12 +70,12 @@
                 //Like button and Fan Count
                 for (var k = 0; k < response.accounts.data.length; k++) {
                   if (response.accounts.data[k].id == "112420816862") {
-                    var fanCount = $("<button id='likedBtn'>");
+                    var fanCount = $("<button id='likedBtn' class='btnFb'>");
                     fanCount.html("<i class='fab fa-facebook-square'></i>  Liked");
                     //fanCount.text(response.accounts.data[k].fan_count);
                     headerDiv.append(fanCount);
                     var fc = response.accounts.data[k].fan_count;
-                    headerDiv.append("<span>  "+fc+" likes  </span><br/>");
+                    headerDiv.append("<span class='btnFb'>  "+fc+" likes  </span><br/>");
                   }
                 }
 
