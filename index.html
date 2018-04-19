@@ -59,6 +59,15 @@
                 // }
                 
                 
+                
+
+                //Church Name
+                var churchName = response.name;
+                //Post
+                var post = tmp.data[i].message.replace(/\n/g, "<br />");
+                //Append all items to 
+                newDiv.append("<span class='churchName'>"+churchName+"</span><br/>");
+                
                 //Like button and Fan Count
                 for (var k = 0; k < response.accounts.data.length; k++) {
                   if (response.accounts.data[k].id == "112420816862") {
@@ -71,12 +80,7 @@
                   }
                 }
 
-                //Church Name
-                var churchName = response.name;
-                //Post
-                var post = tmp.data[i].message.replace(/\n/g, "<br />");
-                //Append all items to 
-                newDiv.append("<span class='churchName'>"+churchName+"</span><br/>");
+
                 newDiv.append(post);
                 
                 
