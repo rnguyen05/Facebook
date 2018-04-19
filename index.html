@@ -42,10 +42,11 @@
         FB.api("/me?fields=id,name,likes,posts.limit(5){message,permalink_url},accounts{fan_count,cover}&access_token=EAADk3j5HRzgBAGjOhK2ZC0keBZBWZCNdWWAERm4jdWuZCR1pYE3qBZABfucDPcL35rHEI9HnjtIlgGP9C6XMas8Q7fZCu7HnHa691WdEOKHxNFziprJ6OQqUJdyZAhW0k7x00vqQHkZCZAtnn3rGvYJC7ENKh4bFExIfZAYtpq2ie51wZDZD",
             function(response) {
               console.log(response);
-              var coverImg = document.getElementById("showPage");
-              var newImg = document.createElement("img");
-              coverImg.appendChild(newImg);
-              coverImg.innerHTML = response.accounts.data[2].cover.source;
+              //create cover image background
+              var coverImg = new Image(445,70);
+              coverImg.src = response.accounts.data[2].cover.source;
+              var tmpImg = document.getElementById("showPage");
+              tmpImg.appendChild(coverImg);
 
               //Show fan_count
               var newDiv = document.getElementById("showPost");
