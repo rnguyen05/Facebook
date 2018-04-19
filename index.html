@@ -61,11 +61,11 @@
                   if (response.accounts.data[k].id == "112420816862") {
                     var imgDiv = $("<div class='imageDiv'>");
                     var logoImg = $("<img>");
-                    logoImg.attr("src",response.accounts.data[k].cover.source);
+                    //logoImg.attr("src",response.accounts.data[k].cover.source);
                     // headerDiv.css("background-image:url('"+logoImg+"');");
-                    imgDiv.append(logoImg);
+                    //imgDiv.append(logoImg);
 
-                    var getImgSrc = $(".imageDiv logoImg");
+                    var getImgSrc = $(".imageDiv logoImg").attr("src",response.accounts.data[k].cover.source);
                     $("#headerDiv").css("background-image","url("+getImgSrc+")");
                     //headerDiv.css("background-image", "url("+logoImg+")");
                     //headerDiv.append(logoImg);
