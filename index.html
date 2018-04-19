@@ -37,7 +37,7 @@
         });
 
         console.log("before FB.API");
-        FB.api("/me?fields=id,name,likes,posts.limit(4){message,permalink_url},accounts{fan_count,cover},context&access_token=EAADk3j5HRzgBAGjOhK2ZC0keBZBWZCNdWWAERm4jdWuZCR1pYE3qBZABfucDPcL35rHEI9HnjtIlgGP9C6XMas8Q7fZCu7HnHa691WdEOKHxNFziprJ6OQqUJdyZAhW0k7x00vqQHkZCZAtnn3rGvYJC7ENKh4bFExIfZAYtpq2ie51wZDZD",
+        FB.api("/me?fields=id,name,likes,posts.limit(4){message,permalink_url},accounts{fan_count,cover},friends&access_token=EAADk3j5HRzgBAGjOhK2ZC0keBZBWZCNdWWAERm4jdWuZCR1pYE3qBZABfucDPcL35rHEI9HnjtIlgGP9C6XMas8Q7fZCu7HnHa691WdEOKHxNFziprJ6OQqUJdyZAhW0k7x00vqQHkZCZAtnn3rGvYJC7ENKh4bFExIfZAYtpq2ie51wZDZD",
             function(response) {
               var tmpTitle = response;
               console.log(tmpTitle);
@@ -73,6 +73,8 @@
                     var fanCount = $("<button id='likeBtn' class='rightHeaderDiv'>");
                     fanCount.html("<i class='fab fa-facebook-square'></i>  Like");
                     headerDiv.append(fanCount);
+                    var fc = response.accounts.data[k].fan_count;
+                    headerDiv.append("<span class='rightHeaderDiv'>  "+fc+" likes&nbsp&nbsp&nbsp</span>");
                     var fc = response.accounts.data[k].fan_count;
                     headerDiv.append("<span class='rightHeaderDiv'>  "+fc+" likes&nbsp&nbsp&nbsp</span><br/>");
                   }
