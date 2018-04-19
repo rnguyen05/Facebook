@@ -1,6 +1,11 @@
 #showPost {
     font-family: sans-serif;
-    font-size: 10px;
+    font-size: 11px;
+}
+
+#postDiv {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
 }
 
 #logo {
