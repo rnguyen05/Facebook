@@ -43,7 +43,7 @@
             function(response) {
               console.log(response);
               var coverImg = document.getElementById("showPage");
-              coverImg.innerHTML = response.accounts.source;
+              coverImg.innerHTML = response.accounts.data[2].cover.source;
 
               //Show fan_count
               var newDiv = document.getElementById("showPost");
