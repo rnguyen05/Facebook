@@ -74,9 +74,10 @@
                     var fanCount = $("<button id='likedBtn'>");
                     fanCount.html("<i class='fab fa-facebook-square'></i>  Liked");
                     //fanCount.text(response.accounts.data[k].fan_count);
-                    headerDiv.append(fanCount);
+                    rightheaderDiv.append(fanCount);
                     var fc = response.accounts.data[k].fan_count;
-                    headerDiv.append("<span>  "+fc+" likes  </span><br/>");
+                    rightheaderDiv.append("<span>  "+fc+" likes  </span><br/>");
+                    headerDiv.append(rightHeaderDiv);
                   }
                 }
 
