@@ -53,7 +53,7 @@
                   if (response.accounts.data[k].id == "112420816862") {
                     var logoImg = $("<img>");
                     logoImg.attr("src",response.accounts.data[k].cover.source);
-                    logoImg.attr("class","logoImg");
+                    logoImg.css("background-image:url('"+logoImg+"');");
                     headerDiv.append(logoImg);
                   }
                 }
