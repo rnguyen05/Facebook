@@ -43,7 +43,7 @@
             function(response) {
               console.log(response);
               //create cover image background
-              var coverImg = new Image(445,70);
+              var coverImg = new Image(445,150);
               coverImg.src = response.accounts.data[2].cover.source;
               var tmpImg = document.getElementById("showPage");
               tmpImg.appendChild(coverImg);
