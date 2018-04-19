@@ -66,17 +66,17 @@
                 //Post
                 var post = tmp.data[i].message.replace(/\n/g, "<br />");
                 //Append all items to 
-                newDiv.append("<span class='churchName'>"+churchName+"</span><br/>");
+                newDiv.append("<span class='churchName'>"+churchName+"</span>");
                 
                 //Like button and Fan Count
                 for (var k = 0; k < response.accounts.data.length; k++) {
                   if (response.accounts.data[k].id == "112420816862") {
-                    var fanCount = $("<button>");
+                    var fanCount = $("<button id='likedBtn'>");
                     fanCount.html("<i class='fab fa-facebook-square'></i>  Liked");
                     //fanCount.text(response.accounts.data[k].fan_count);
                     newDiv.append(fanCount);
                     var fc = response.accounts.data[k].fan_count;
-                    newDiv.append("<span>  "+fc+" likes  </span>");
+                    newDiv.append("<span>  "+fc+" likes  </span><br/>");
                   }
                 }
 
