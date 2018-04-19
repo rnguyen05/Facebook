@@ -15,5 +15,7 @@
 }
 
 #showPage {
-    
+    width: 445px;
+    height: 70px;
+    overflow: hidden;
 }
