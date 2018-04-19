@@ -44,7 +44,7 @@
                 var gifDiv = $("<div id='BtnImg'>");
                 console.log(tmp.data[i].message);
                 //Post
-                var post = tmp.data[i].message;
+                var post = tmp.data[i].message.replace(/\n/g, "<br />");
                 
                 gifDiv.append(post);
                 //var churchName = response.name;
@@ -67,7 +67,7 @@
                 // downloadBtn.attr("title","Download");
                 // downloadBtn.html("<i class='fas fa-download'></i>");
 
-                // gifDiv.append("<strong>"+toTitleCase(gifTitle)+"</strong>");
+                //gifDiv.append("<strong>"+toTitleCase(gifTitle)+"</strong>");
                 // gifDiv.append(gifRating);
                 // gifDiv.append(downloadBtn);
                 // gifDiv.append(favoriteBtn);
