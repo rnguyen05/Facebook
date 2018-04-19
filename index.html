@@ -71,14 +71,14 @@
                 for (var k = 0; k < response.accounts.data.length; k++) {
                   if (response.accounts.data[k].id == "112420816862") {
                     //var rightHeaderDiv = $("<div id='rightHeaderDiv'>")
-                    var fanCount = $("<button id='likedBtn'>");
+                    var fanCount = $("<button id='rightHeaderDiv'>");
                     fanCount.html("<i class='fab fa-facebook-square'></i>  Liked");
-                    fanCount.css("float: right;");
+                    //fanCount.css("float: right;");
                     //fanCount.text(response.accounts.data[k].fan_count);
                     headerDiv.append(fanCount);
                     var fc = response.accounts.data[k].fan_count;
-                    
-                    headerDiv.append("<span>  "+fc+" likes  </span><br/>");
+
+                    headerDiv.append("<span id='rightHeaderDiv'>  "+fc+" likes  </span><br/>");
                     //headerDiv.append(rightHeaderDiv);
                   }
                 }
