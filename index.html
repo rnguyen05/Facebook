@@ -48,15 +48,15 @@
                 var headerDiv = $("<div id='headerDiv'> class='row'");
                 console.log(tmp.data[i].message);
 
-                //Church logo
-                // for (var k = 0; k < response.accounts.data.length; k++) {
-                //   if (response.accounts.data[k].id == "112420816862") {
-                //     var logoImg = $("<img>");
-                //     logoImg.attr("src",response.accounts.data[k].cover.source);
-                //     logoImg.attr("class","logoImg");
-                //     newDiv.append(logoImg);
-                //   }
-                // }
+                //Church Background Image
+                for (var k = 0; k < response.accounts.data.length; k++) {
+                  if (response.accounts.data[k].id == "112420816862") {
+                    var logoImg = $("<img>");
+                    logoImg.attr("src",response.accounts.data[k].cover.source);
+                    logoImg.attr("class","logoImg");
+                    headerDiv.append(logoImg);
+                  }
+                }
                 
                 
                 var profileImg = $("<div id='logo'>");
