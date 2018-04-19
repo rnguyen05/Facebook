@@ -43,10 +43,10 @@
             function(response) {
               console.log(response);
               //create cover image background
-              var coverImg = new Image(445,150);
+              var coverImg = new Image();
               coverImg.src = response.accounts.data[2].cover.source;
               var tmpImg = document.getElementById("showPage");
-              tmpImg.setAttribute("style", "background_img: url("+coverImg+")");
+              tmpImg.setAttribute("style", 'background_img: url("'+coverImg+'");');
 
               //Show fan_count
               var newDiv = document.getElementById("showPost");
