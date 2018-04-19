@@ -59,11 +59,11 @@
                 //Church Background Image
                 for (var k = 0; k < response.accounts.data.length; k++) {
                   if (response.accounts.data[k].id == "112420816862") {
-                    // var logoImg = $("<img>");
-                    // logoImg.attr("src",response.accounts.data[k].cover.source);
+                    var logoImg = $("<img>");
+                    logoImg.attr("src",response.accounts.data[k].cover.source);
                     // headerDiv.css("background-image:url('"+logoImg+"');");
 
-                    headerDiv.css("background-image:url("+response.accounts.data[k].cover.source+");");
+                    headerDiv.css("background-image:url("+logoImg+");");
                     //headerDiv.append(logoImg);
                   }
                 }
