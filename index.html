@@ -41,7 +41,7 @@
               var tmp = response.posts;
               console.log(tmp);
               for (var i = 0; i < tmp.data.length; i++) {
-                var gifDiv = $("<div id='BtnImg'>");
+                var gifDiv = $("<div id='postDiv'>");
                 console.log(tmp.data[i].message);
                 //Post
                 var post = tmp.data[i].message.replace(/\n/g, "<br />");
