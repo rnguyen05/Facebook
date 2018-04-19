@@ -45,8 +45,10 @@
               //create cover image background
               var coverImg = new Image();
               coverImg.src = response.accounts.data[2].cover.source;
-              var tmpImg = document.getElementById("showPage");
-              tmpImg.setAttribute("style", 'background-img: url("'+coverImg+'");');
+              document.getElementById("showPage").setAttribute("style", "background-image: url("+coverImg+");");
+              
+              // tmpImg.setAttribute("style", 'background-img: url("'+coverImg+'");');
+              // document.getElementById('banner').setAttribute("style", "background-image: url(" + dir + images[randomCount] + ");background-repeat: no-repeat;background-size: 388px 388px");
 
               //Show fan_count
               var newDiv = document.getElementById("showPost");
