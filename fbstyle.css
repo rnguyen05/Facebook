@@ -14,6 +14,7 @@
     font-family: Arial, Helvetica, sans-serif;
     font-size: 10px;
     margin-right: 10px;
+    color: white;
 }
 
 #headerDiv {
@@ -54,6 +55,7 @@
     font-size: 15px;
     font-weight: bold;
     float: left;
+    color: white;
 }
 
 
