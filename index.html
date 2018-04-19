@@ -43,6 +43,8 @@
             function(response) {
               console.log(response);
               var coverImg = document.getElementById("showPage");
+              var newImg = document.createElement("img");
+              coverImg.appendChild(newImg);
               coverImg.innerHTML = response.accounts.data[2].cover.source;
 
               //Show fan_count
