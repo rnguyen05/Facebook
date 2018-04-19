@@ -6,9 +6,10 @@
 
 #logo {
     float: left;
-    padding: 10px;
+    padding: 25px;
     border: 3px solid white;
     background-image: url("https://scontent.frir1-1.fna.fbcdn.net/v/t1.0-1/c25.0.100.100/p100x100/1936663_112435211862_8135495_n.jpg?_nc_cat=0&oh=53a2b1c33580a77790775ded067b777d&oe=5B713462");
-    height: 50px;
-    width: 50px;
+    height: 45px;
+    width: 45px;
+    margin-right: 10px;
 }
