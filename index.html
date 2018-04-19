@@ -45,7 +45,7 @@
               var tmp = response.posts;
               console.log(tmp);
               for (var i = 0; i < tmp.data.length; i++) {
-                var newDiv = $("<div id='postDiv'>");
+                var headerDiv = $("<div id='headerDiv'> class='row'");
                 console.log(tmp.data[i].message);
 
                 //Church logo
@@ -63,10 +63,9 @@
 
                 //Church Name
                 var churchName = response.name;
-                //Post
-                var post = tmp.data[i].message.replace(/\n/g, "<br />");
+                
                 //Append all items to 
-                newDiv.append("<span class='churchName'>"+churchName+"</span>");
+                headerDiv.append("<span class='churchName'>"+churchName+"</span>");
                 
                 //Like button and Fan Count
                 for (var k = 0; k < response.accounts.data.length; k++) {
@@ -74,14 +73,16 @@
                     var fanCount = $("<button id='likedBtn'>");
                     fanCount.html("<i class='fab fa-facebook-square'></i>  Liked");
                     //fanCount.text(response.accounts.data[k].fan_count);
-                    newDiv.append(fanCount);
+                    headerDiv.append(fanCount);
                     var fc = response.accounts.data[k].fan_count;
-                    newDiv.append("<span>  "+fc+" likes  </span><br/>");
+                    headerDiv.append("<span>  "+fc+" likes  </span><br/>");
                   }
                 }
 
-
-                newDiv.append(post);
+                //Post
+                var bodyDiv = $("<div id='bodyDiv'> class='row'");
+                var post = tmp.data[i].message.replace(/\n/g, "<br />");
+                bodyDiv.append(post);
                 
                 
                 
@@ -115,7 +116,8 @@
                 
                 
 
-                $("#showPost").append(newDiv);   
+                $("#showPost").append(headerDiv);  
+                $("#showPost").append(bodyDiv);   
               }//end for loop
 
               // console.log(response);
