@@ -40,11 +40,11 @@
             function(response) {
               var tmp = response.posts;
               console.log(tmp);
-              for (var i = 0; i < tmp.length; i++) {
+              for (var i = 0; i < tmp.data.length; i++) {
                 var gifDiv = $("<div id='BtnImg'");
-                console.log(tmp[i].message);
+                console.log(tmp.data[i].message);
                 //Title
-                var churchName = response.name;
+                //var churchName = response.name;
                 // gifTitle = gifTitle.substring(0, gifTitle.indexOf('GIF'));
                 // //Gif Rating
                 // var gifRating = "<br />Rating: "+results[d].rating;
