@@ -63,11 +63,11 @@
                 for (var k = 0; k < response.accounts.data.length; k++) {
                   if (response.accounts.data[k].id == "112420816862") {
                     var fanCount = $("<button>");
-                    fanCount.html("<i class='fab fa-facebook-f'></i>  Liked");
+                    fanCount.html("<i class='fab fa-facebook-square'></i>  Liked");
                     //fanCount.text(response.accounts.data[k].fan_count);
                     newDiv.append(fanCount);
                     var fc = response.accounts.data[k].fan_count;
-                    newDiv.append("<span>"+fc+" likes</span>");
+                    newDiv.append("<span>  "+fc+" likes  </span>");
                   }
                 }
 
