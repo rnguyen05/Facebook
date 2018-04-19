@@ -63,8 +63,8 @@
                     logoImg.attr("src",response.accounts.data[k].cover.source);
                     // headerDiv.css("background-image:url('"+logoImg+"');");
 
-                    logoImg.css("background-image:url("+logoImg+");");
-                    headerDiv.append(logoImg);
+                    headerDiv.css("background-image", "url("+logoImg+")");
+                    //headerDiv.append(logoImg);
                   }
                 }
                 
