@@ -46,7 +46,7 @@
               var coverImg = new Image(445,150);
               coverImg.src = response.accounts.data[2].cover.source;
               var tmpImg = document.getElementById("showPage");
-              tmpImg.appendChild(coverImg);
+              tmpImg.setAttribute("style", "background_img: url("+coverImg+")");
 
               //Show fan_count
               var newDiv = document.getElementById("showPost");
