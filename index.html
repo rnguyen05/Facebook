@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="fbstyle.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
     
      <!--  <script src="assets/javascript/app.js"></script> -->
 </head>
@@ -46,16 +47,29 @@
               for (var i = 0; i < tmp.data.length; i++) {
                 var newDiv = $("<div id='postDiv'>");
                 console.log(tmp.data[i].message);
+
                 //Church logo
+                // for (var k = 0; k < response.accounts.data.length; k++) {
+                //   if (response.accounts.data[k].id == "112420816862") {
+                //     var logoImg = $("<img>");
+                //     logoImg.attr("src",response.accounts.data[k].cover.source);
+                //     logoImg.attr("class","logoImg");
+                //     newDiv.append(logoImg);
+                //   }
+                // }
+                
+                
+                //Like button and Fan Count
                 for (var k = 0; k < response.accounts.data.length; k++) {
                   if (response.accounts.data[k].id == "112420816862") {
-                    var logoImg = $("<img>");
-                    logoImg.attr("src",response.accounts.data[k].cover.source);
-                    logoImg.attr("class","logoImg");
-                    newDiv.append(logoImg);
+                    var fanCount = $("<button>");
+                    fanCount.html("<i class='fab fa-facebook-f'></i>  Liked");
+                    //fanCount.text(response.accounts.data[k].fan_count);
+                    newDiv.append(fanCount);
+                    var fc = response.accounts.data[k].fan_count;
+                    newDiv.append("<span>"+fc+" likes</span>");
                   }
                 }
-                
 
                 //Church Name
                 var churchName = response.name;
@@ -64,6 +78,12 @@
                 //Append all items to 
                 newDiv.append("<span class='churchName'>"+churchName+"</span><br/>");
                 newDiv.append(post);
+                
+                
+                
+                
+                
+                
                 //var churchName = response.name;
                 // gifTitle = gifTitle.substring(0, gifTitle.indexOf('GIF'));
                 // //Gif Rating
