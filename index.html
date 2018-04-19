@@ -36,7 +36,15 @@
           version          : 'v2.12'
         });
 
-        console.log("before FB.API");
+
+        //FB Call for Events
+        FB.api("/me?fields=id,name,accounts{name,access_token}&access_token=EAADk3j5HRzgBAGjOhK2ZC0keBZBWZCNdWWAERm4jdWuZCR1pYE3qBZABfucDPcL35rHEI9HnjtIlgGP9C6XMas8Q7fZCu7HnHa691WdEOKHxNFziprJ6OQqUJdyZAhW0k7x00vqQHkZCZAtnn3rGvYJC7ENKh4bFExIfZAYtpq2ie51wZDZD",
+          function(results) {
+              console.log(results);
+          }
+        );
+
+        //FB Call for posts 
         FB.api("/me?fields=id,name,likes,posts.limit(4){message,permalink_url},accounts{fan_count,cover},friends&access_token=EAADk3j5HRzgBAGjOhK2ZC0keBZBWZCNdWWAERm4jdWuZCR1pYE3qBZABfucDPcL35rHEI9HnjtIlgGP9C6XMas8Q7fZCu7HnHa691WdEOKHxNFziprJ6OQqUJdyZAhW0k7x00vqQHkZCZAtnn3rGvYJC7ENKh4bFExIfZAYtpq2ie51wZDZD",
             function(response) {
               var tmpTitle = response;
@@ -103,6 +111,7 @@
                 var bodyDiv = $("<div id='bodyDiv'> class='row'");
                 var post = tmp.data[i].message.replace(/\n/g, "<br />");
                 bodyDiv.append(post);
+                //See more... click function
                 bodyDiv.append("See more...");
                 
                 
