@@ -46,6 +46,17 @@
               for (var i = 0; i < tmp.data.length; i++) {
                 var newDiv = $("<div id='postDiv'>");
                 console.log(tmp.data[i].message);
+                //Church logo
+                for (var k = 0; k < response.accounts.data.length; k++) {
+                  if (response.accounts.data[k].id == "112420816862") {
+                    var logoImg = $("<img>");
+                    logoImg.attr("src",response.accounts.data[k].cover.source);
+                    logoImg.attr("class","logoImg");
+                    newDiv.append(logoImg);
+                  }
+                }
+                
+
                 //Church Name
                 var churchName = response.name;
                 //Post
@@ -78,13 +89,7 @@
                 // gifDiv.append(downloadBtn);
                 // gifDiv.append(favoriteBtn);
                 
-                // var gifImg = $("<img>");
-                // gifImg.attr("src",results[d].images.fixed_height_still.url);
-                // gifImg.attr("data-still",results[d].images.fixed_height_still.url);
-                // gifImg.attr("data-animate",results[d].images.fixed_height.url);
-                // gifImg.attr("data-state","still");
-                // gifImg.attr("class","gifImg");
-                // gifDiv.append(gifImg);
+                
 
                 $("#showPost").append(newDiv);   
               }//end for loop
